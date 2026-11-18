@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.FoodShareConnect"
+        android:supportsRtl="true">
+
+        <activity
+            android:name=".ui.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.FoodShareConnect.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ui.auth.LoginActivity" android:exported="false" />
+        <activity android:name=".ui.auth.RegisterActivity" android:exported="false" />
+        <activity android:name=".ui.auth.TwoFactorActivity" android:exported="false" />
+        <activity android:name=".ui.auth.EnableAuthenticatorActivity" android:exported="false" />
+
+        <activity android:name=".ui.beneficiary.BeneficiaryDashboardActivity" android:exported="false" />
+        <activity android:name=".ui.beneficiary.CreateFoodRequestActivity" android:exported="false" />
+
+        <activity android:name=".ui.admin.AdminDashboardActivity" android:exported="false" />
+        <activity android:name=".ui.admin.AdminOrganisationsActivity" android:exported="false" />
+        <activity android:name=".ui.admin.VetOrganisationActivity" android:exported="false" />
+        <activity android:name=".ui.admin.AdminFoodRequestsActivity" android:exported="false" />
+        <activity android:name=".ui.admin.ReviewFoodRequestActivity" android:exported="false" />
+        <activity android:name=".ui.admin.AdminDonationsActivity" android:exported="false" />
+        <activity android:name=".ui.admin.CreateDonationActivity" android:exported="false" />
+
+        <activity android:name=".ui.contact.ContactUsActivity" android:exported="false" />
+
+    </application>
+
+</manifest>

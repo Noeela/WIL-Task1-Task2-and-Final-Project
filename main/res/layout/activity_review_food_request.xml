@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Review request"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary_dark"
+                android:layout_marginBottom="14dp" />
+
+            <TextView android:id="@+id/textOrgName" android:layout_width="match_parent" android:layout_height="wrap_content" android:textStyle="bold" tools:text="Organisation: Khayelitsha Community Kitchen" />
+            <TextView android:id="@+id/textCategory" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" tools:text="Category: Fresh Produce" />
+            <TextView android:id="@+id/textQuantity" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" tools:text="Requested quantity: 50 kg" />
+            <TextView android:id="@+id/textBeneficiaries" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" tools:text="Beneficiaries: 120" />
+            <TextView android:id="@+id/textNeededBy" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" tools:text="Needed by: 15 Sep 2026" />
+            <TextView android:id="@+id/textMotivation" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:textColor="@color/text_muted" android:visibility="gone" tools:text="Motivation: Winter shelter feeding programme" />
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E0E0E0" android:layout_marginVertical="16dp" />
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Link to available donation" android:textStyle="bold" android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textNoStockWarning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/warning_bg"
+                android:padding="12dp"
+                android:text="No available donation currently matches this category and quantity. Capture a new donation first, or decline this request."
+                android:visibility="gone" />
+
+            <Spinner android:id="@+id/spinnerDonation" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="8dp" android:background="@color/surface" />
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/Widget.FoodShareConnect.TextInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:hint="Note to organisation (optional)">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputNote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minLines="2"
+                    android:gravity="top"
+                    android:inputType="textMultiLine" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/danger"
+                android:visibility="gone" />
+
+            <ProgressBar android:id="@+id/progressBar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:layout_marginTop="8dp" android:visibility="gone" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonApprove"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Approve Request" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonDecline"
+                style="@style/Widget.FoodShareConnect.Button.Danger"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="30dp"
+                android:text="Decline Request" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

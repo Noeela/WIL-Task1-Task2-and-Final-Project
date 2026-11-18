@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="76dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/logo_foodforward"
+                android:contentDescription="@string/app_name" />
+
+            <com.google.android.material.card.MaterialCardView style="@style/Widget.FoodShareConnect.Card" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="National Office" android:textStyle="bold" android:textSize="16sp" android:textColor="@color/primary_dark" />
+
+                    <TextView
+                        android:id="@+id/textNationalPhone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/ffsa_national_phone"
+                        android:textColor="@color/primary"
+                        android:textSize="16sp"
+                        android:drawablePadding="8dp"
+                        android:clickable="true"
+                        android:focusable="true" />
+
+                    <TextView
+                        android:id="@+id/textNationalEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="@string/ffsa_national_email"
+                        android:textColor="@color/primary"
+                        android:clickable="true"
+                        android:focusable="true" />
+
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="@string/ffsa_national_address" android:textColor="@color/text_muted" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="@string/ffsa_hours" android:textColor="@color/text_muted" android:textSize="12sp" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="8dp"
+                android:text="Regional Branches"
+                android:textStyle="bold"
+                android:textSize="15sp" />
+
+            <com.google.android.material.card.MaterialCardView style="@style/Widget.FoodShareConnect.Card" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="14dp">
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ffsa_wc_manager" android:textStyle="bold" />
+                    <TextView android:id="@+id/textWcPhone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ffsa_wc_phone" android:textColor="@color/primary" android:clickable="true" android:focusable="true" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView style="@style/Widget.FoodShareConnect.Card" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="14dp">
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ffsa_gp_manager" android:textStyle="bold" />
+                    <TextView android:id="@+id/textGpPhone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ffsa_gp_phone" android:textColor="@color/primary" android:clickable="true" android:focusable="true" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView style="@style/Widget.FoodShareConnect.Card" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="14dp">
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ffsa_kzn_manager" android:textStyle="bold" />
+                    <TextView android:id="@+id/textKznPhone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ffsa_kzn_phone" android:textColor="@color/primary" android:clickable="true" android:focusable="true" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView style="@style/Widget.FoodShareConnect.Card" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="14dp">
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ffsa_fs_manager" android:textStyle="bold" />
+                    <TextView android:id="@+id/textFsPhone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ffsa_fs_phone" android:textColor="@color/primary" android:clickable="true" android:focusable="true" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView style="@style/Widget.FoodShareConnect.Card" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="30dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="14dp">
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ffsa_ec_manager" android:textStyle="bold" />
+                    <TextView android:id="@+id/textEcPhone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ffsa_ec_phone" android:textColor="@color/primary" android:clickable="true" android:focusable="true" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>
